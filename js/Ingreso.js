@@ -4,23 +4,23 @@ document.getElementById("agregarbtn").addEventListener("click", (e) => {
   var tipo_resultado = tipo.value;
   if (tipo_resultado == "egreso") {
     ing = ing + 1;
-    var nameid = "elemento" + ing;
+    var nameId = "elemento" + ing;
     var div1 = document.createElement("div");
     div1.className = "elemento limpiarEstilos";
     div1.id = nameId;
     document.getElementById("lista-ingresos").appendChild(div1);
 
     //crear descripcion para que salga en HTMl
-    var descricion = document.getElementById("descripcion").value;
+    var descripcion = document.getElementById("descripcion").value;
     var div2 = document.createElement("div");
     div2.className = "elemento_descripcion";
-    div2.innerHTML = descricion;
+    div2.innerHTML = descripcion;
     div2.id = nameId;
     document.getElementById(nameId).appendChild(div2);
 
     var nameId2 = "cantidad" + ing;
     var div3 = document.createElement("div");
-    dive3.className = "derecha limpiarEstilos";
+    div3.className = "derecha limpiarEstilos";
     div3.id = nameId2;
     document.getElementById(nameId).appendChild(div2);
 
