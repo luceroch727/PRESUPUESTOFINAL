@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css" title="css">
+    <title>AVANCE 1</title>
+</head>
+
+<body>
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo"> Presupuesto Disponible</div>
+            <div id="prespuestoDisponible--valor" class="presupuesto_valor">
+                0.00
+            </div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">
+                    ingresos
+                </div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor" id="presupuesto_ingreso--valor">0.00 </div>
+                    <div class="presupuesto_ingreso--porcentaje" id="presupuesto_ingreso--porcentaje">0%</div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">
+                    Egresos
+                </div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="presupuesto_egreso--valor">0.00</div>
+                    <div class="presupuesto_egreso--porcentaje" id="presupuesto_egreso--porcentaje">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SEGUNDA PART-->
+
+    <form id="forma">
+        <div class="agregar">
+            <div class="agregar_contenedor">
+                <!--- slelector-->
+                <select class="agregar_tipo" id="tipo">
+                    <option value="ingreso" selected="true">+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text" class="agregar_descripcion" id="descripcion" placeholder="Agregar Descripción">
+                <input type="number" class="agregar_valor" placeholder="valor" id="valor">
+                <button type="button" class="agregar_btn" id="agregarbtn">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+    <!--Contenedor-->
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            <div id="lista-ingresos"></div>
+        </div>
+        <div class="egreso">
+            <h2 class="egreso_titulo"> Egresos </h2>
+            <div id="lista-egresos"></div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/js/Egreso.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/Ingreso.js"></script>
+    <script src="/js/Dato.js"></script>
+
+</body>
+
+</html>
